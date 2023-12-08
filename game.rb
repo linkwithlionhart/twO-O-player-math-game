@@ -7,10 +7,13 @@ class Game
   end 
 
   def play
-    while @player_1.has_lives? && player_2.has_lives?
+    while @player_1.has_lives? && @player_2.has_lives?
       new_turn
       question = Question.new
-      puts "#{@current_player.name}"
+      puts "#{@current_player.name}: #{question.ask}"
+      user_answer = get.chomp.to_i
+    end
+    game_over
   end
 
   def new_turn
