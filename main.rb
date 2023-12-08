@@ -4,12 +4,12 @@
   The player whose turn it is is prompted the question and must answer correctly or lose a life.
 =end
 
-puts "Welcome, Player 1! Let's play a game."
-puts "Say hi to Player 2."
-puts "What's your name?"
+puts "Welcome, Player 1! Let's play a math game."
+puts "Say hi to your competitor, Player 2."
+puts "Player 1, what's your name?"
 player_name = gets.chomp
 player_1 = Player.new(player_name)
-player_2 = player_2
+player_2 = 'Player 2'
 player_2 = Player.new(player_2)
 
 game1 = Game.new(player_1, player_2)
