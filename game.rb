@@ -31,6 +31,8 @@ class Game
 
   def game_over
     puts "----- GAME OVER -----"
+    winner = @player_1.lives > @player_2.lives ? @player_1 : @player_2
+    puts "#{winner.name} wins with a score of #{winner.lives}/#{winner.total_lives}"
     puts "Good bye!"
   end
 
