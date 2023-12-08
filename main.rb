@@ -4,6 +4,7 @@
   The player whose turn it is is prompted the question and must answer correctly or lose a life.
 =end
 
+require_relative 'game'
 require_relative 'player'
 require_relative 'question'
 
