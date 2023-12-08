@@ -7,7 +7,7 @@ class Question
   end
 
   def ask
-    puts "what does #{@num_1} plus #{@num_2} equal?"
+    puts "What does #{@num_1} plus #{@num_2} equal?"
   end
 
   def correct?(player_answer)

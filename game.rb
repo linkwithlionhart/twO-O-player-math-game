@@ -10,8 +10,9 @@ class Game
     while @player_1.has_lives? && @player_2.has_lives?
       new_turn
       question = Question.new
-      puts "#{@current_player.name}: #{question.ask}"
-      user_answer = get.chomp.to_i
+      print "#{@current_player.name}: "
+      print "#{question.ask}"
+      user_answer = gets.chomp.to_i
       if question.correct?(user_answer)
         puts "YES! You are correct."
       else
@@ -34,7 +35,7 @@ class Game
   end
 
   def show_lives
-    puts "P1 #{player_1.lives}/#{player_1.total_lives} vs P2 #{player_2.lives}/#{player_2.total_lives}"
+    puts "P1 #{@player_1.lives}/#{@player_1.total_lives} vs P2 #{@player_2.lives}/#{@player_2.total_lives}"
   end
 
   def switch_player
